@@ -1,0 +1,140 @@
+ :root {
+   --nav-color: rgb(52, 50, 52);
+   --bg-color: rgb(255, 255, 255);
+   --body-color: rgb(254, 250, 254);
+ }
+
+ @media only screen and (max-width:5000px) {
+   body {
+     font-family: Arial, sans-serif;
+     margin: 0px;
+
+     padding: 0px;
+     background-color: var(--bg-color);
+   }
+ }
+
+
+ nav {
+   background-color: var(--nav-color);
+   width: 99vw;
+   height: 7vh;
+   margin: 0px;
+   margin-top: -16px;
+   padding-top: 0px;
+ }
+
+
+ nav ul {
+   display: flex;
+
+   li {
+
+     list-style: none;
+     padding: 14px;
+     cursor: pointer;
+     position: relative;
+     top: px;
+     left: 73vw;
+     bottom: -px;
+
+     a {
+       color: rgba(253, 253, 253, 0.849);
+       margin: 20px 10px;
+       text-decoration: none;
+     }
+   }
+ }
+
+ .container {
+   display: inline-block;
+   cursor: pointer;
+   position: relative;
+   right: 75vw;
+ }
+
+ .bar1,
+ .bar2,
+ .bar3 {
+   width: 35px;
+   height: 5px;
+   background-color: #f9f7f7;
+   margin: 3px 0;
+   transition: 0.4s;
+ }
+
+ .change .bar1 {
+   transform: translate(0, 6px) rotate(-45deg);
+ }
+
+ .change .bar2 {
+   opacity: 0;
+ }
+
+ .change .bar3 {
+   transform: translate(0, -11px) rotate(45deg);
+ }
+
+
+#damaged-road-form {
+  max-width: 700px;
+  
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #eddbdb;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 100px;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 80px;
+  font-size: 40px;
+    color: #ff2f00;
+}
+
+#damaged-road-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+#damaged-road-form label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 40px;
+  font-size: large;
+}
+
+#damaged-road-form input,
+#damaged-road-form textarea,
+#damaged-road-form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #c5bbbb;
+  border-radius: 6px;
+}
+
+#damaged-road-form input:focus,
+#damaged-road-form textarea:focus {
+  outline: none;
+  border-color: #1d3557;
+  box-shadow: 0 0 5px rgba(29,53,87,0.4);
+}
+
+#damaged-road-form button {
+  margin-top: 100px;
+  background: #1d3557;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#damaged-road-form button:hover {
+  background: #457b9d;
+}
+ 
