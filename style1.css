@@ -14,7 +14,9 @@
    }
  }
 
-
+html {
+ scroll-behavior: smooth;
+}
  .photo-row {
    display: flex;
    justify-content: space-between;
