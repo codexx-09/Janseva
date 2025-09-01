@@ -196,6 +196,12 @@ body {
   padding: 10px;
   border-radius: 5px;
   transition: 0.3s;
+ a {
+    text-decoration: none;
+   }
+ a:visited {
+  color:black ;
+ }
   
 }
 
