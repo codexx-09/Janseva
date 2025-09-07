@@ -285,11 +285,7 @@ a:visited {
   border-left: 5px solid #e63946;
 }
 
- footer {
-   background-color: var(--nav-color);
-   height: 150px;
- }
-
+ 
  .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -385,3 +381,77 @@ a:visited {
     margin: 5px auto;
   }
 }
+ .footer {
+   background: #222;
+   color: #ddd;
+   padding: 40px 20px;
+   font-family: Arial, sans-serif;
+   text-align: center;
+ }
+
+ .footer-container {
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   max-width: 1200px;
+   margin: auto;
+ }
+
+ .footer-column {
+   flex: 1;
+   min-width: 280px;
+   margin: 15px;
+ }
+
+ .footer-column h3 {
+   color: #fff;
+   margin-bottom: 15px;
+   font-size: 18px;
+ }
+
+ .footer-column p {
+   line-height: 1.6;
+   font-size: 14px;
+ }
+
+ .footer-column ul {
+   list-style: none;
+   padding: 0;
+ }
+
+ .footer-column ul li {
+   margin-bottom: 8px;
+   font-size: 14px;
+ }
+
+ .footer-column ul li a {
+   color: #ddd;
+   text-decoration: none;
+ }
+
+ .footer-column ul li a:hover {
+   text-decoration: underline;
+ }
+
+ .emergency-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   
+   gap: 1px;
+   margin-bottom: 50px;
+   text-align:center;
+ }
+
+ .emergency-grid p {
+   margin: 5px 0;
+   font-size: 14px;
+ }
+
+ .footer-bottom {
+   text-align: center;
+   padding: 15px;
+   border-top: 1px solid #444;
+   margin-top: 20px;
+   font-size: 14px;
+   color: #aaa;
+ }
