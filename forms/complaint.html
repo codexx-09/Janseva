@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Complaint</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Submit Your Complaint</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="complaint.html">Submit Complaint</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="complaintForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <label for="phone">Mobile No:</label>
+      <input type="text" id="name" placeholder="Enter your mobile number" required>
+
+      <label for="email">Email (optional):</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="category" search>Complaint Type:</label>
+      <select id="category" required>
+        <option value="">-- Choose an issue --</option>
+        <option value="pothole">Pothole or Damaged Road</option>
+        <option value="garbage">Uncollected Garbage</option>
+        <option value="electricity">Electricity Outage</option>
+        <option value="noise">Noise Pollution</option>
+        <option value="corruption">Corruption</option>
+        <option value="others">Others</option>
+      </select>
+
+      <label for="address">Address:</label>
+      <textarea id="address" rows="5" placeholder="Enter the address of that place " required></textarea>
+
+      <label for="imgupload">Upload an image:</label>
+       <input id="imgupload" type="file" name="fileupload">
+
+      <label for="desc">Complaint Description:</label>
+      <textarea id="desc" rows="5" required></textarea>
+      
+      <label for="date">Complaint date:</label>
+      <input id=" date" type="date" name="date" required>
+      <button type="submit">Submit Complaint</button>
+    </form>
+    <div id="messageBox"></div>
+  </main>
+</body>
+</html>
