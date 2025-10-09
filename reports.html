@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Reports - Janseva</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    .reports-container {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .reports-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .filter-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-box select {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .reports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .report-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .report-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .report-status {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .resolved {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+
+    .pending {
+      background: #fff3e0;
+      color: #ef6c00;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="track.html">Track Status</a>
+      <a href="reports.html">Explore Reports</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="reports-container">
+      <h2>Explore Public Reports</h2>
+
+      <div class="filter-box">
+        <label for="filter">Filter by Status:</label>
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="resolved">Resolved</option>
+          <option value="pending">Pending</option>
+        </select>
+      </div>
+
+      <div class="reports-grid" id="reportsGrid">
+        <!-- Example report cards -->
+        <div class="report-card" data-status="resolved">
+          <h3>Potholes on Main Road</h3>
+          <p>Large potholes causing traffic problems near Sector 21.</p>
+          <span class="report-status resolved">Resolved</span>
+        </div>
+
+        <div class="report-card" data-status="pending">
+          <h3>Uncollected Garbage</h3>
+          <p>Garbage not collected in Housing Board Colony for 3 days.</p>
+          <span class="report-status pending">Pending</span>
+        </div>
+
+        <div class="report-card" data-status="resolved">
+          <h3>Streetlights Not Working</h3>
+          <p>Streetlights are off in Sector 15, causing safety issues at night.</p>
+          <span class="report-status resolved">Resolved</span>
+        </div>
+
+        <div class="report-card" data-status="pending">
+          <h3>Water Leakage</h3>
+          <p>Water pipe leakage near Old Market, wasting fresh water.</p>
+          <span class="report-status pending">Pending</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+ 
+
+  <script>
+    const filter = document.getElementById("filter");
+    const reports = document.querySelectorAll(".report-card");
+
+    filter.addEventListener("change", () => {
+      const value = filter.value;
+      reports.forEach(report => {
+        if (value === "all" || report.dataset.status === value) {
+          report.style.display = "block";
+        } else {
+          report.style.display = "none";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
