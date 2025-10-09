@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janseva | Login & Signup</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #e63946, #1d3557);
+    }
+
+    .container {
+      background: #fff;
+      width: 380px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 0.7s ease;
+    }
+
+    
+
+    h1 {
+      color: #e63946;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 12px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 2px solid #ccc;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #e63946;
+      box-shadow: 0 0 5px rgba(230, 57, 70, 0.4);
+    }
+
+    
+
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #c92c3b;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .link a {
+      color: #1d3557;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+
+    .form {
+      transition: transform 0.6s ease;
+    }
+
+    .signup-form {
+      display: none;
+    }
+
+    .container.signup-active .login-form {
+      display: none;
+    }
+
+    .container.signup-active .signup-form {
+      display: block;
+    }
+
+    .toggle-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .toggle-text span {
+      color: #e63946;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .toggle-text span:hover {
+      text-decoration: underline;
+    }
+    .forgot-password {
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    .forgot-password a {
+      color: #1d3557;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+      color: #e63946;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container" id="form-container">
+    <!-- LOGIN FORM -->
+    <div class="form login-form">
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Login to your Janseva account</p>
+
+      <form id="loginForm">
+        <label>Email or Phone</label>
+        <input type="text" placeholder="Enter email or phone" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+        <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+        
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <div class="toggle-text">
+        Don't have an account? <span id="showSignup">Sign up</span>
+      </div>
+    </div>
+
+    <!-- SIGNUP FORM -->
+    <div class="form signup-form">
+      <h1>Create Account</h1>
+      <p class="subtitle">Join Janseva to report and track complaints</p>
+
+      <form id="signupForm">
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="Create password" required>
+
+
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+
+      <div class="toggle-text">
+        Already have an account? <span id="showLogin">Login</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const container = document.getElementById("form-container");
+    const showSignup = document.getElementById("showSignup");
+    const showLogin = document.getElementById("showLogin");
+
+    showSignup.addEventListener("click", () => {
+      container.classList.add("signup-active");
+    });
+
+    showLogin.addEventListener("click", () => {
+      container.classList.remove("signup-active");
+    });
+
+    // Optional: Add form submit alerts (for testing)
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Login Successful!");
+    });
+
+    document.getElementById("signupForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Account Created Successfully!");
+    });
+  </script>
+</body>
+</html>
