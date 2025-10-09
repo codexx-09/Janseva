@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Status - Janseva</title>
+  <link rel="stylesheet" href="style1.css">
+  <style>
+    .track-container {
+      max-width: 600px;
+      margin: 80px auto;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .track-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .track-container input {
+      width: 95.5%;
+      padding: 12px;
+      margin: 10px 0 ;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .track-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .track-container button:hover {
+      background: #444;
+    }
+
+    .status-box, .error-box {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 6px;
+      display: none;
+    }
+
+    .status-box {
+      background: #e8f5e9;
+      border: 1px solid #c8e6c9;
+    }
+
+    .error-box {
+      background: #ffebee;
+      border: 1px solid #ffcdd2;
+      color: #c62828;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="track.html">Track Status</a>
+      <a href="reports.html">Explore Reports</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="track-container">
+      <h2>Track Your Complaint</h2>
+      <form id="trackForm">
+        <input type="text" id="complaintId" placeholder="Enter Complaint ID or Mobile Number" required>
+        <button type="submit">Check Status</button>
+      </form>
+
+      <!-- Success Box -->
+      <div class="status-box" id="statusBox">
+        <h3>Status Result:</h3>
+        <p><strong>Complaint ID:</strong> #JNSV12345</p>
+        <p><strong>Status:</strong> ✅ Resolved</p>
+        <p><strong>Last Updated:</strong> 26 Sept 2025</p>
+      </div>
+
+      <!-- Error Box -->
+      <div class="error-box" id="errorBox">
+        <p>❌ Invalid Complaint ID or Mobile Number. Please try again.</p>
+      </div>
+    </div>
+  </main>
+
+ 
+
+  <script>
+    const form = document.getElementById("trackForm");
+    const statusBox = document.getElementById("statusBox");
+    const errorBox = document.getElementById("errorBox");
+
+    // Example valid IDs/numbers
+    const validIds = ["JNSV12345", "9315777273"];
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const input = document.getElementById("complaintId").value.trim();
+
+      if (validIds.includes(input)) {
+        errorBox.style.display = "none";
+        statusBox.style.display = "block";
+      } else {
+        statusBox.style.display = "none";
+        errorBox.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
