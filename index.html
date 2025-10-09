@@ -10,26 +10,31 @@
 
 <body>
   <header>
-  
 
-    <div class=""></div>
-    <div class="overlay-content">
+    
 
-      <nav>
-        <ul>
-          <li>
-            <div class="container" onclick="myFunction(this)">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-            </div>
-          </li>
-          <li><a href="index.html">Home</a> </li>
-          <li><a href="about.html">About</a> </li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        <li>
+          <div class="container" onclick="toggleSidebar(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <div id="mySidebar" class="sidebar">
+            
+            <a href="login.html">Login</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </li>
+        <li><a href="index.html">Home</a> </li>
+        <li><a href="about.html">About</a> </li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    
 
 
     <div class="photo-row">
@@ -37,7 +42,8 @@
       <img class="small1" src="images/namastey.png" alt="Left Photo">
       <center> <img class="large" src="images/logo1.png" alt="Center Photo"> </center>
       <img class="small2" src="images/namastey.png" alt="Right Photo">
-      <a href="https://swachhbharatmission.ddws.gov.in/"><img class="chasma" src="images/pngwing.com.png" alt="chasma"> </a>
+      <a href="https://swachhbharatmission.ddws.gov.in/"><img class="chasma" src="images/pngwing.com.png" alt="chasma">
+      </a>
     </div>
 
     <div class="images">
@@ -63,35 +69,37 @@
         their resolution, we make the process simple, transparent, and quick.
       </p>
       <p>
-      
+
       <ul>
-        <li><a href="#public-problems"><strong>Submit Complaint</strong> – Report an issue in just a few clicks.</a></li>
-        <li><strong>Track Status</strong> – Check the progress of your submitted complaints.</li>
-        <li><strong>Explore Reports</strong> – View public issues in your area.</li>
+        <li><a href="#public-problems"><strong>Submit Complaint</strong> – Report an issue in just a few clicks.</a>
+        </li>
+        <li><a href="trackstatus.html"><strong>Track Status</strong> – Check the progress of your submitted
+            complaints.</a></li>
+        <li><a href="reports.html"><strong>Explore Reports</strong> – View public issues in your area.</a></li>
       </ul>
       </p>
       <div class="stats-grid">
-  <div class="card">
-    <div class="icon">⚠</div>
-    <h2>1,245</h2>
-    <p>Problems Reported</p>
-  </div>
-  <div class="card">
-    <div class="icon">🗹</div>
-    <h2>987</h2>
-    <p>Problems Resolved</p>
-  </div>
-  <div class="card">
-    <div class="icon">👥</div>
-    <h2>3,456</h2>
-    <p>Active Users</p>
-  </div>
-  <div class="card">
-    <div class="icon">⏱</div>
-    <h2>2.5 days</h2>
-    <p>Avg. Response Time</p>
-  </div>
-</div>
+        <div class="card">
+          <div class="icon">⚠</div>
+          <h2>1,245</h2>
+          <p>Problems Reported</p>
+        </div>
+        <div class="card">
+          <div class="icon">🗹</div>
+          <h2>987</h2>
+          <p>Problems Resolved</p>
+        </div>
+        <div class="card">
+          <div class="icon">👥</div>
+          <h2>3,456</h2>
+          <p>Active Users</p>
+        </div>
+        <div class="card">
+          <div class="icon">⏱</div>
+          <h2>2.5 days</h2>
+          <p>Avg. Response Time</p>
+        </div>
+      </div>
 
 
       </div>
@@ -99,67 +107,89 @@
     <section id="public-problems">
       <div class="scroll-box">
         <h2 class="sticky-heading">Select The Issue You Have To Complain</h2>
-      <ul>
-       <li><a href="forms/roads.html"> Potholes and damaged roads</a></li>
-        <li><a href="forms/garbage.html">Uncollected garbage</a></li>
-        <li><a href="forms/Electicity_outage.html">Electricity Outage</a></li>
-        <li><a href="forms/water_leakage.html">Water leakage or supply issues</a></li>
-        <li><a href="forms/waterlogging.html">Waterlogging during Rain</a></li>
-        <li><a href="forms/lackOfClean.html">Lack of Cleaning in Public Areas</a></li>
-        <li><a href="forms/streetlights.html">Malfunctioning streetlights</a></li>
-        <li><a href="forms/block_drenage.html">Blocked or overflowing drainage</a></li>
-        <li><a href="forms/gas_leakage.html">Gas Pipeline Leakage</a></li>
-        <li><a href="forms/public_property.html">Damaged Public Property (benches, poles, etc.)</a></li>
-        <li><a href="forms/noice.html">Noise pollution in residential areas</a></li>
-        <li><a href="forms/ill_dump.html">Illegal dumping of waste</a></li>
-        <li><a href="forms/missing.html">Missing report</a></li>
-        <li><a href="forms/corruption.html">Bribery or Corruption Report</a></li>
-        <li><a href="forms/staff.html">Unresponsive Staff or Delayed Service</a></li>
-        <li><a href="forms/crime.html">Street Crime / Suspicious Activity</a></li>
-        <li><a href="forms/trafficlight.html">Broken Traffic Lights</a></li>
-        <li><a href="forms/signboard.html">Lack of Signboards or Direction Boards</a></li>
-        <li><a href="forms/overprice.html">Overpricing or Black Marketing</a></li>
-        <li><a href="forms/expired-food.html">Expired Food/Products Sold</a></li>
-        <li><a href="forms/vendors.html">Unlicensed Street Vendors</a></li>
-        <li><a href="forms/others.html">Others</a></li>
+        <ul>
+          <li><a href="forms/roads.html"> Potholes and damaged roads</a></li>
+          <li><a href="forms/garbage.html">Uncollected garbage</a></li>
+          <li><a href="forms/Electicity_outage.html">Electricity Outage</a></li>
+          <li><a href="forms/water_leakage.html">Water leakage or supply issues</a></li>
+          <li><a href="forms/waterlogging.html">Waterlogging during Rain</a></li>
+          <li><a href="forms/lackOfClean.html">Lack of Cleaning in Public Areas</a></li>
+          <li><a href="forms/streetlights.html">Malfunctioning streetlights</a></li>
+          <li><a href="forms/block_drenage.html">Blocked or overflowing drainage</a></li>
+          <li><a href="forms/gas_leakage.html">Gas Pipeline Leakage</a></li>
+          <li><a href="forms/public_property.html">Damaged Public Property (benches, poles, etc.)</a></li>
+          <li><a href="forms/noice.html">Noise pollution in residential areas</a></li>
+          <li><a href="forms/ill_dump.html">Illegal dumping of waste</a></li>
+          <li><a href="forms/missing.html">Missing report</a></li>
+          <li><a href="forms/corruption.html">Bribery or Corruption Report</a></li>
+          <li><a href="forms/staff.html">Unresponsive Staff or Delayed Service</a></li>
+          <li><a href="forms/crime.html">Street Crime / Suspicious Activity</a></li>
+          <li><a href="forms/trafficlight.html">Broken Traffic Lights</a></li>
+          <li><a href="forms/signboard.html">Lack of Signboards or Direction Boards</a></li>
+          <li><a href="forms/overprice.html">Overpricing or Black Marketing</a></li>
+          <li><a href="forms/expired-food.html">Expired Food/Products Sold</a></li>
+          <li><a href="forms/vendors.html">Unlicensed Street Vendors</a></li>
+          <li><a href="forms/others.html">Others</a></li>
 
-      </ul>
+        </ul>
       </div>
     </section>
 
   </main>
   <script>
-    function myFunction(x) {
-      x.classList.toggle("change");
-      
-    }
-  </script>
-   <footer class="footer">
-     <div class="footer-container">
-        <div class="footer-column">
-      <h3>Emergency Numbers</h3>
-       <div class="emergency-grid">
-        <p>Police: 100</p>
-        <p>Fire: 101</p>
-        <p>Ambulance: 108 / 102</p>
-        <p>Women Helpline: 1091</p>
-        <p>Child Helpline: 1098</p>
-        <p>Electricity Helpline: 1912</p>
-        <p>Water Supply Helpline: 155303</p>
-        <p>Road Accidents: 1073</p> 
-        <p>Disaster Management (NDMA): 1078</p>
-       </div>
-      
+     function toggleSidebar(x) {
+    x.classList.toggle("change");
+    const sidebar = document.getElementById("mySidebar");
+    const overlay = document.getElementById("overlay");
 
-      <h3>Contact Info</h3>
-      <p>📍 Faridabad, Haryana, India | 📞 +91 9315777273, +91 9354335765 | 📧 support@janseva.org</p>
-      
-    </div> 
-     </div>
-      <div class="footer-bottom">
-    <p>© 2025 Janseva. All rights reserved. | Designed for a better tomorrow.</p>
-  </div>
+    if (sidebar.style.width === "250px") {
+      // Sidebar is closing
+      sidebar.style.width = "0";
+      overlay.style.display = "none";
+      document.body.style.overflow = "auto"; // ✅ Allow scroll again
+    } else {
+      // Sidebar is opening
+      sidebar.style.width = "250px";
+      overlay.style.display = "block";
+      document.body.style.overflow = "hidden"; // 🚫 Disable background scroll
+    }
+  }
+
+  function closeSidebar() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.querySelector(".container").classList.remove("change");
+    document.getElementById("overlay").style.display = "none";
+    document.body.style.overflow = "auto"; // ✅ Re-enable scrolling
+  }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Emergency Numbers</h3>
+        <div class="emergency-grid">
+          <p>Police: 100</p>
+          <p>Fire: 101</p>
+          <p>Ambulance: 108 / 102</p>
+          <p>Women Helpline: 1091</p>
+          <p>Child Helpline: 1098</p>
+          <p>Electricity Helpline: 1912</p>
+          <p>Water Supply Helpline: 155303</p>
+          <p>Road Accidents: 1073</p>
+          <p>Disaster Management (NDMA): 1078</p>
+        </div>
+
+
+        <h3>Contact Info</h3>
+        <p>📍 Faridabad, Haryana, India | 📞 +91 9315777273 | 📧 support@janseva.org</p>
+
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Janseva. All rights reserved. | Designed for a better tomorrow.</p>
+    </div>
   </footer>
+
 
 </body>
 
