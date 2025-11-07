@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janseva | Contact Us</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f7f8fc;
+      color: #222;
+    }
+
+    /* ====== Navbar (same as your homepage) ====== */
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .logo img{
+      width: 100px;
+      height: auto;
+    }
+
+    header nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #c70039;
+    }
+
+    /* ====== Contact Section ====== */
+    .contact-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 40px 50px;
+    }
+
+    .contact-section h1 {
+      text-align: center;
+      color: #c70039;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      text-align: center;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+    }
+
+    .contact-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1 1 45%;
+      padding: 10px 20px;
+    }
+
+    .contact-info h3 {
+      color: #c70039;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: #f8f8f8;
+    }
+
+    form button {
+      background-color: #c70039;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background-color: #a0002d;
+    }
+
+    
+    footer {
+      background-color: #111;
+      color: #fff;
+      padding: 40px 0 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+   
+
+    footer p {
+     
+      font-size: 0.9rem;
+      color: #aaa;
+      
+      
+    }
+
+    footer .bottom {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+    }
+
+    @media(max-width: 768px) {
+      .contact-content {
+        flex-direction: column;
+      }
+      .contact-info, .contact-form {
+        flex: 1 1 100%;
+      }
+      header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header>
+    <div class="logo"><img class="large" src="images/logo1.png" alt="Center Photo"></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" style="color:#c70039;">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Whether you have a question, suggestion, or feedback, reach out using the form below or contact us directly.</p>
+
+    <div class="contact-content">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p><strong>📍 Address:</strong> Faridabad, Haryana, India</p>
+        <p><strong>📞 Phone:</strong> +91 9315777273</p>
+        <p><strong>📧 Email:</strong> support@janseva.org</p>
+        <p>Our support team will get back to you as soon as possible.</p>
+      </div>
+
+      <div class="contact-form">
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    
+    <p class="thanks">Thankyou for your support!</p>
+    
+    <p class="bottom">© 2025 Janseva. All rights reserved. | Designed for a better tomorrow.</p>
+  </footer>
+
+</body>
+</html>
